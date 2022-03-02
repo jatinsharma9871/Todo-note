@@ -1,0 +1,137 @@
+*{
+    margin: 0p;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.add-note{
+    position: relative;
+    background-color: burlywood;
+    color: black;
+    width: 8rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    left: 10%;
+    right: 5%;
+    font-size: 15px;
+}
+.add-note:hover{
+    opacity: 0.7;
+}
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    /* background: white; */
+    background: blue;
+    background: linear-gradient(139deg, #03ddffcb 0%, #ff0381b6 90%);
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 110;
+    padding: 12px 16px 12px 16px;
+  }
+input {
+    margin-bottom: 1rem;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+
+}
+h1{
+    position: relative;
+    text-align: center;
+}
+
+.model{
+    position: fixed;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    border: 1px solid black;
+    transition: 0.2s ease-in;
+    border-radius: 5px;
+
+}
+.model:target {
+    opacity: 1;
+    pointer-events: auto;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.model-content{
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    border: rgba(0, 0, 0, 0.192);
+    padding: 2rem;
+    background-color: saddlebrown;
+    backdrop-filter:blur(10px);
+    color: white;
+}
+.cancel, .submit{
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.note-table{
+    position: relative;
+    width: 40%;
+    left: 10%;
+    background: gainsboro;
+    top: 10%;
+    border-radius: 5px;
+}
+
+
+
+
+.green{
+    font-size: 100px;
+    color:green;
+    background-color: chartreuse;
+    width: 50%;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+.green:hover{
+    opacity: 0.7;
+}
+.border{
+    color: indigo;
+}
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }ul li:hover {
+    background: #ddd;
+  }
